@@ -82,5 +82,12 @@ public class TransitService {
         
         Collections.sort(nearbyBuses, new BusComparator());
         return nearbyBuses;
+
+
+    }
+
+    public Location getPersonLocation(BusRequest request) {
+        Location personLocation = this.getCoordinates(request.address + " " + request.city);
+        return personLocation;
     }
 }
